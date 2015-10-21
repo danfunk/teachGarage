@@ -8,13 +8,14 @@ use sbt to build the project.  Then 'run' at the sbt prompt will start the serve
 
 ## Assumptions / Basic Nature of the Application
 
-1. The application will be split into a series of user interfaces and a backend REST based api.  I will focus on the API, but will include some calls to demonstrate the process.
-1. There will be the following calls on the API
+1. A "parkingSpace" is defined as a numbered space on a specific floor.  It might eventually need to include coordinates for proper plotting on a display, but we'll do that in a later iteration and assume the display knows where to plot the spots.
+2. There can be x number of floors, and x number of "parkingSpace" on a floor.  These values can be configured in the control panel.
+2. The application will be split into a series of user interfaces and a backend REST based api.  I will focus on the API, but will include some calls to demonstrate the process.
+3. There will be the following calls on the API
     * listSpots (provides details on available spots)
     * reserveSpot
     * takeSpot
     * releaseSpot
-1. A spot is defined as a numbered space on a specific floor.  It might need to include coordinates for proper plotting on a display, but we'll do that in a later iteration and assume the display knows where to plot the spots.
 
 ## Contributing
 

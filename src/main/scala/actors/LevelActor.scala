@@ -8,7 +8,7 @@ object LevelActor {
 
 /**
  * A parking lot can have many levels, each level is made up of a series
- * of spaces.
+ * of spaces or "Spots".  A Level mainly just rolls up it's spots.
  */
 class LevelActor(spaces:Int) extends Actor {
 
@@ -37,6 +37,7 @@ class LevelActor(spaces:Int) extends Actor {
           println("Sending back: " + spotList)
           listSpotsSender.map(_ ! spotList)
           running = false
+          spotList = Nil
       }
     }
   }

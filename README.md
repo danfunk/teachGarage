@@ -22,10 +22,10 @@ Interesting classes at this point are the LevelActor and SpotActor and their res
 
 I had hoped to complete a MicroService using the new Akka HTTP library.  But I feel like at 2 days,
 it's time I get something back to you.  I've invested much more time in this than I had hoped. It
-took considerable time to re-orient myself on the Akka world view, and the various oddities that
-can bite you.
+took considerable time to re-orient myself on the Akka world view.  But it was a pleasurable process
+overall, and a great way to think through some common problems and basic methodologies.
 
 Thank you for taking the time to talk to me on Monday.  I would delighted to receive any feedback
-you might have on the work I've done.
+you might have on the work I've done.  Good luck in your search. 
 
 Dan

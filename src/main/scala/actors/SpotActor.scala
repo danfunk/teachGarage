@@ -54,10 +54,12 @@ class SpotActor(id:Int) extends Actor {
 
   override def receive: Receive = {
     case SpotActor.ReserveMsg => {
+      println("Received Reserve Message on Spot #" + id)
       if (state == Free) {
         reservation = Random.nextString(20)
         reserved = true
         occupied = false
+        println("All good, returning reservation '" + reservation + "' string to Sender: " + sender().toString())
         sender ! reservation
       } else {
         throw SpotNotAvailableException("This Spot is already reserved or occupied.")
@@ -81,8 +83,8 @@ class SpotActor(id:Int) extends Actor {
     }
 
     case SpotActor.ReleaseMsg => {
+      this.reserved = false
       this.occupied = false
-      this.reservation = ""
       this.reservation = ""
       sender ! true
     }
